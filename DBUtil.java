@@ -16,6 +16,7 @@ public class DBUtil {
             e.printStackTrace();
         }
     }
+  private static final String DB_PASSWORD = "406727"; //
 
     public static Connection getConnection() {
         Connection conn = null;
