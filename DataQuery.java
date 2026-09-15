@@ -14,7 +14,7 @@ public class DataQuery {
 
         // 场景1：按价格区间提取（20-100元）
         System.out.println("===== 价格20-100元商品 =====");
-        queryByPriceRange(conn, 20, 100);
+        queryByPriceRange(conn, 1120, 1100);
 
         // 场景2：按购买人数排序，取销量前10
         System.out.println("\n===== 销量前10商品 =====");
