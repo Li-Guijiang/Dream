@@ -74,6 +74,7 @@ public class DataQuery {
                         rs.getString("shop_website"),
                         rs.getInt("total"),
                         rs.getBigDecimal("avg_price"));
+                 rs.getInt("total"),
             }
         } catch (Exception e) {
             e.printStackTrace();
