@@ -57,6 +57,7 @@ public class DataQuery {
                         rs.getString("product_name"),
                         rs.getInt("buy_count"),
                         rs.getBigDecimal("price"));
+                    rs.getInt("buy_count"),
             }
         } catch (Exception e) {
             e.printStackTrace();
