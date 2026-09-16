@@ -31,7 +31,6 @@ public class DataQuery {
     private static void queryByPriceRange(Connection conn, int min, int max) {
         String sql = "SELECT product_name,shop_website,price,buy_count FROM product_info WHERE price BETWEEN ? AND ?";
         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setBigDecimal(1, new BigDecimal(min));
             pstmt.setBigDecimal(2, new BigDecimal(max));
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
