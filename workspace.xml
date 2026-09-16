@@ -38,6 +38,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
     &quot;应用程序.DBUtil.executor&quot;: &quot;Run&quot;,
+       &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;应用程序.DataProcess.executor&quot;: &quot;Run&quot;,
     &quot;应用程序.DataQuery.executor&quot;: &quot;Run&quot;,
     &quot;应用程序.Main.executor&quot;: &quot;Run&quot;
