@@ -55,7 +55,7 @@
         </pattern>
       </extension>
       <method v="2">
-        <option name="Make" enabled="true" />
+        <option name="Make" enabled="false" />
       </method>
     </configuration>
     <configuration name="DataProcess" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
