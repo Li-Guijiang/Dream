@@ -64,8 +64,8 @@ public class DataProcess {
                 pstmt.setString(2, productName);
                 pstmt.setBigDecimal(3, price);
                 pstmt.setTimestamp(4, onShelfTime);
-                pstmt.setInt(5, buyCount);
-
+           
+                  pstmt.setInt(5, buyCount);
                 // 添加到批量执行队列
                 pstmt.addBatch();
                 successCount++;
