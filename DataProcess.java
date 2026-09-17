@@ -1,5 +1,5 @@
 package com.shop.service;
-
+import java.util.Date;
 import com.shop.util.DBUtil;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -7,7 +7,6 @@ import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 // 数据处理类：CSV读取、强制转换、写入MySQL
 public class DataProcess {
