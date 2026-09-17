@@ -61,8 +61,9 @@ public class DataProcess {
 
                 // 给SQL占位符赋值
                 pstmt.setString(1, shopWebsite);
-                pstmt.setString(2, productName);
+            
                 pstmt.setBigDecimal(3, price);
+                  pstmt.setString(2, productName);
                 pstmt.setTimestamp(4, onShelfTime);
            
                   pstmt.setInt(5, buyCount);
