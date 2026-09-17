@@ -25,9 +25,10 @@ public class DataProcess {
 
         try (
                 // 2. 读取CSV文件
+              PreparedStatement pstmt = conn.prepareStatement(insertSql)
                 BufferedReader br = new BufferedReader(new FileReader(csvPath));
                 // 3. 创建预处理SQL语句
-                PreparedStatement pstmt = conn.prepareStatement(insertSql)
+              
         ) {
             // 跳过CSV表头行
             br.readLine();
