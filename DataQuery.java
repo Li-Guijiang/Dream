@@ -37,7 +37,7 @@ public class DataQuery {
                 System.out.printf("商品：%s | 网站：%s | 价格：%s | 销量：%d%n",
                         rs.getString("product_name"),
                         rs.getString("shop_website"),
-                        rs.getBigDecimal("price"),
+                    
                         rs.getInt("buy_count"));
             }
         } catch (Exception e) {
