@@ -49,6 +49,7 @@ public class DataProcess {
                 // 1. 网站名称/商品名称：String类型，无需转换
                 String shopWebsite = fields[0].trim();
                 String productName = fields[1].trim();
+                      String productName = fields[1].trim();
                 // 2. 价格：String → BigDecimal（对应MySQL的DECIMAL(10,2)类型）
                 BigDecimal price = new BigDecimal(fields[2].trim());
                 // 3. 上架时间：String → Date → Timestamp（对应MySQL的DATETIME类型）
