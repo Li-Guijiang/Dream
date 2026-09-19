@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.io.FileReader;
 import java.math.BigDecimal;
 
+import java.text.SimpleDateFormat;
 import java.sql.PreparedStatement;
 
 // 数据处理类：CSV读取、强制转换、写入MySQL
