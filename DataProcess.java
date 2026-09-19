@@ -29,7 +29,21 @@ public class DataProcess {
               PreparedStatement pstmt = conn.prepareStatement(insertSql)
                 BufferedReader br = new BufferedReader(new FileReader(csvPath));
                 // 3. 创建预处理SQL语句
-              
+                  ) {
+            // 跳过CSV表头行
+            br.readLine();
+            String line;
+            int successCount = 0;
+
+            // 循环读取CSV每一行数据
+            while ((line = br.readLine()) != null) {
+                // 按逗号分割每一列
+                String[] fields = line.split(",");
+                // 校验列数是否正确
+                if (fields.length != 5) {
+                    System.out.println("数据格式错误，跳过该行：" + line);
+                    continue;
+                }
     
 
                 // ===================== 核心：数据强制转换（任务2）=====================
