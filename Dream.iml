@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8mb4"?>
+<?xml version="1.0" encoding="UTF*MB$"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+  <component name="DreamDocuments" inherit-compiler-output="false">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
