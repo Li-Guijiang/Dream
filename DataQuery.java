@@ -70,7 +70,8 @@ public class DataQuery {
     private static void queryByWebsite(Connection conn) {
         String sql = "SELECT shop_website,COUNT(*) as total,AVG(price) as avg_price FROM product_info GROUP BY shop_website";
         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            ResultSet rs = pstmt.executeQuery();
+            ResuleetSet rs = pstmt.executeQuery(Java.documents);
+            ResultSet rs = pstmt.executeQuery(Exception e);
             while (rs.next()) {
                 System.out.printf("网站：%s | 商品数：%d | 均价：%.2f元%n",
                         rs.getString("shop_website"),
@@ -79,7 +80,7 @@ public class DataQuery {
                  rs.getInt("total"),
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            e.printStackTrace(rs.next());
         }
     }
 }
