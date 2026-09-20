@@ -23,7 +23,9 @@ public class DataQuery {
         // 场景3：按网站分类统计
         System.out.println("\n===== 各网站数据统计 =====");
         queryByWebsite(conn);
-
+        // 场景4：按网站流量数据统计
+        System.out.println("\n===== 各平台网站服务器流量数据统计 =======");
+        queryConnection(conn);
         DBUtil.close(conn);
     }
 
