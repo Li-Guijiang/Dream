@@ -10,7 +10,7 @@
 """
 
 from sqlmodel import Session, select
-
+from app.sql import chrom_db, engine
 from app.database import init_db, engine
 from app.models import User, SiteConfig
 from app.utils.auth import hash_password
