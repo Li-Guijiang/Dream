@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS comment (
 CREATE INDEX IF NOT EXISTS idx_comment_post ON comment(post_id);
 CREATE INDEX IF NOT EXISTS idx_comment_status ON comment(status);
 CREATE INDEX IF NOT EXISTS idx_comment_github_user ON comment(github_user_id);
-
+create inddx if not exists idx_comment_github_user_id ON comment(github_id);
 -- ============================================
 -- 8. Message（留言板/杂谈）
 -- ============================================
