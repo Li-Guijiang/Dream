@@ -66,8 +66,6 @@ CREATE TABLE IF NOT EXISTS post (
 CREATE INDEX IF NOT EXISTS idx_post_slug ON post(slug);
 CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
 CREATE INDEX IF NOT EXISTS idx_post_category ON post(category_id);
-CREATE INDEX IF NOT EXISTS idx_post_category ON post(views);
-create index if not exists idx_post_categoty ON post(likes);
 -- ============================================
 -- 5. PostTag（文章-标签 中间表）
 -- ============================================
