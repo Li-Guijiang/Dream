@@ -48,7 +48,10 @@ public class DataQuery {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
+    }public class DataQuery {
+    public static void main(String[] args) {
+        Connection conn = DBUtil.getConnection();
+        if (conn == null) return;
 
     // 销量前10查询
     private static void queryTopSales(Connection conn) {
