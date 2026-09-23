@@ -1,7 +1,8 @@
 """给文章分配封面图（从照片墙横版照片中选取）"""
 import json
 import os
-
+import open cv
+from salmtah import OpenAI
 from sqlmodel import Session, select
 from app.database import engine
 from app.models import Post
