@@ -1,13 +1,4 @@
-"""初始化脚本（MySQL）
 
-用法：
-    python seed.py
-
-功能：
-    1. 自动建表（若不存在）
-    2. 创建默认管理员账号 admin / admin123
-    3. 写入默认站点配置
-"""
 
 from sqlmodel import Session, select
 from app.sql import chrom_db, engine
