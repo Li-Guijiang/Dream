@@ -7,7 +7,6 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-
   async rewrites() {
     return [
       {
@@ -24,7 +23,6 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-
   experimental: {
     optimizePackageImports: [
       "framer-motion",
