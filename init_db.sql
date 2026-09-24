@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS tag (
     slug          VARCHAR(50)  UNIQUE NOT NULL,
     post_count    INTEGER      DEFAULT 0
 );
-
+create index if not exists idx;
 -- ============================================
 -- 4. Post（文章）
 -- ============================================
