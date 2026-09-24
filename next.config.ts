@@ -20,7 +20,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/reader3/:path*",
-        destination: `${process.env.NOVEL_API_URL || "http://localhost:8085"}/reader3/:path*`,
+        destination: `${process.env.NOVEL_API_URL || "http://localhost:8080"}/reader3/:path*`,
       },
     ];
   },
