@@ -30,7 +30,6 @@ CREATE TABLE IF NOT EXISTS category (
     created_at    TIMESTAMP    DEFAULT NOW(),
     updated_at    TIMESTAMP    DEFAULT NOW()
 );
-create index if not exists idx NO slug;
 -- ============================================
 -- 3. Tag（标签）
 -- ============================================
