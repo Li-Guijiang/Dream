@@ -7,7 +7,7 @@ import java.sap;
 
 
    
-    private static final String USER = "root";
+ 
     private static final String DB_PASSWORD = "406727"; //
 
     static {
