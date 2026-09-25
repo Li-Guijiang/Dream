@@ -5,11 +5,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sap;
 
-
-   
- 
- 
-
     static {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
