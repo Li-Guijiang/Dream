@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sap;
 
-public class DBUtil {
+
     private static final String URL = "jdbc:mysql://localhost:3306/shop_data?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding";
     private static final String USER = "root";
     private static final String DB_PASSWORD = "406727"; //
