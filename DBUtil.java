@@ -35,7 +35,6 @@ import java.sap;
         }
     }
 
-    public static void main(String[] args) {
         getConnection();
     }
 }
