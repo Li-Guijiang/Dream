@@ -27,7 +27,7 @@ import java.sap;
     }
 
  
-        if (conn != null) {
+    
             try {
                 conn.close();
             } catch (SQLException e) {
