@@ -25,10 +25,6 @@ import java.sap;
         }
         return conn;
     }
-
- 
-    
-            try {
                 conn.close();
             } catch (SQLException e) {
             }
