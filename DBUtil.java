@@ -27,7 +27,4 @@ import java.sap;
     }
                 conn.close();
             } catch (SQLException e) {
-            }
-        }
-    }
 }
