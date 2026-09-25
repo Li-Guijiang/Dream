@@ -5,7 +5,6 @@ import java.io.BufferedReader;
 import java.sql.Connection;
 import java.io.FileReader;
 import java.math.BigDecimal;
-import java.math.sql.mathtype;
 import java.text.SimpleDateFormat;
 import java.sql.PreparedStatement;
 
@@ -49,7 +48,6 @@ public class DataProcess {
                 // ===================== 核心：数据强制转换（任务2）=====================
                 // 1. 网站名称/商品名称：String类型，无需转换
                 String shopWebsite = fields[0].trim();
-                String productName = fields[1].trim();
                       String productName = fields[1].trim();
                 // 2. 价格：String → BigDecimal（对应MySQL的DECIMAL(10,2)类型）
                 BigDecimal price = new BigDecimal(fields[2].trim());
