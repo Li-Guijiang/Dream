@@ -26,7 +26,7 @@ import java.sap;
         return conn;
     }
 
-  
+    public static void close(Connection conn) {
         if (conn != null) {
             try {
                 conn.close();
