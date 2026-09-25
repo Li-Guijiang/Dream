@@ -34,7 +34,4 @@ import java.sap;
             }
         }
     }
-
-        getConnection();
-    }
 }
