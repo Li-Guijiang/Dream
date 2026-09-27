@@ -1,4 +1,4 @@
-package com.shop.util;
+
 import java.sql.mathtype;
 import java.sql.Connection;
 import java.sql.DriverManager;
