@@ -63,6 +63,7 @@ CREATE TABLE IF NOT EXISTS post (
 );
 
 CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
+create index if not exists idx_post_status ON post(status);
 -- ============================================
 -- 5. PostTag（文章-标签 中间表）
 -- ============================================
