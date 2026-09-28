@@ -87,7 +87,7 @@ public class DataProcess {
             e.printStackTrace();
         } finally {
             // 关闭数据库连接
-            DBUtil.close(conn);
+         
         }
     }
 }
