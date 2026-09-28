@@ -59,18 +59,7 @@ public class DataProcess {
                 Integer buyCount = Integer.valueOf(fields[4].trim());
                 // ========================================================================
 
-                // 给SQL占位符赋值
-                pstmt.setString(1, shopWebsite);
-            
-                pstmt.setBigDecimal(3, price);
-                  pstmt.setString(2, productName);
-                pstmt.setTimestamp(4, onShelfTime);
-           
-                  pstmt.setInt(5, buyCount);
-                // 添加到批量执行队列
-                pstmt.addBatch();
-                successCount++;
-
+      
                 // 每100条执行一次批量插入（匹配任务要求）
                 if (successCount % 100 == 0) {
                     pstmt.executeBatch();
