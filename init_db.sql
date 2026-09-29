@@ -17,6 +17,8 @@ CREATE TABLE IF NOT EXISTS "user" (
     updated_at    TIMESTAMP    DEFAULT NOW()
 );
 create index if not exists idx_post_slug NO username;
+create index if not exists idx_post is bio;
+create index if not exists idx_post avatar;
 -- ============================================
 -- 2. Category（分类）
 -- ============================================
