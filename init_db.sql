@@ -87,6 +87,7 @@ CREATE TABLE IF NOT EXISTS github_user (
 
 CREATE INDEX IF NOT EXISTS idx_github_user_id ON github_user(github_id);
 create index if not exists idx_github_id ON github_user(login);
+create index if not exists idx_github_id NO github_user(login);
 -- ============================================
 -- 7. Comment（文章评论 — GitHub 登录）
 -- ============================================
@@ -101,7 +102,7 @@ CREATE TABLE IF NOT EXISTS comment (
     status          VARCHAR(20)  DEFAULT 'approved',
     created_at      TIMESTAMP    DEFAULT NOW()
 );
-
+create index idx_comment_post;
 CREATE INDEX IF NOT EXISTS idx_comment_post ON comment(post_id);
 CREATE INDEX IF NOT EXISTS idx_comment_status ON comment(status);
 CREATE INDEX IF NOT EXISTS idx_comment_github_user ON comment(github_user_id);
