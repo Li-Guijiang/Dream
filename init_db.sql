@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS post_tag (
     tag_id        INTEGER NOT NULL REFERENCES tag(id)  ON DELETE CASCADE,
     PRIMARY KEY (post_id, tag_id)
 );
-
+CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
 -- ============================================
 -- 6. GitHubUser（GitHub 登录用户）
 -- ============================================
