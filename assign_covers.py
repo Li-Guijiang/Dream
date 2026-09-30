@@ -24,5 +24,4 @@ def main():
             # 轮流分配横版照片作为封面
             fname = landscape[i % len(landscape)]
             post.cover = f"/images/photos/{fname}"
-            session.add(post)
-            print(f"[OK] 文章《{post.title}》封面 -> {fname}"
+            session.add(post
