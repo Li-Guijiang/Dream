@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS post (
     created_at    TIMESTAMP    DEFAULT NOW(),
     updated_at    TIMESTAMP    DEFAULT NOW()
 );
-
+CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
 CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
 -- ============================================
 -- 5. PostTag（文章-标签 中间表）
