@@ -40,7 +40,6 @@ CREATE TABLE IF NOT EXISTS tag (
     post_count    INTEGER      DEFAULT 0
 );
 create index if not exists idx;
-create index if not exists idx_post_name github_user_id NO slug;
 -- ============================================
 -- 4. Post（文章）
 -- ============================================
