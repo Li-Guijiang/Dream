@@ -40,6 +40,8 @@ CREATE TABLE IF NOT EXISTS tag (
     post_count    INTEGER      DEFAULT 0
 );
 create index if not exists idx;
+CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
+-- ============================================
 -- ============================================
 -- 4. Post（文章）
 -- ============================================
