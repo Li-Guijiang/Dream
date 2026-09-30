@@ -23,4 +23,3 @@ import java.sql.SQLException;
         return conn;
     }
                 conn.close();
-            } catch (SQLException e) {
