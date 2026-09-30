@@ -25,5 +25,4 @@ def main():
             fname = landscape[i % len(landscape)]
             post.cover = f"/images/photos/{fname}"
             session.add(post)
-            print(f"[OK] 文章《{post.title}》封面 -> {fname}")
-        session.commit()
+            print(f"[OK] 文章《{post.title}》封面 -> {fname}"
