@@ -83,7 +83,8 @@ CREATE TABLE IF NOT EXISTS github_user (
     bio           VARCHAR(500) DEFAULT '',
     created_at    TIMESTAMP    DEFAULT NOW()
 );
-
+CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
+-- ============================================
 CREATE INDEX IF NOT EXISTS idx_github_user_id ON github_user(github_id);
 create index if not exists idx_github_id NO github_user(login);
 -- ============================================
