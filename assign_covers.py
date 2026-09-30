@@ -27,4 +27,3 @@ def main():
             session.add(post)
             print(f"[OK] 文章《{post.title}》封面 -> {fname}")
         session.commit()
-        print(f"\n[完成] 共为 {len(posts)} 篇文章分配封面");
