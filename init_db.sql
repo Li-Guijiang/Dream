@@ -63,8 +63,6 @@ CREATE TABLE IF NOT EXISTS post (
 );
 
 CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
-create index if not exists idx_post github_usre_name NO names;
-create index if not exists idx_is_pinned;
 -- ============================================
 -- 5. PostTag（文章-标签 中间表）
 -- ============================================
