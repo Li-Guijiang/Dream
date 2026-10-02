@@ -3,7 +3,6 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   compress: true,
 
-  // 生产构建跳过 TypeScript 类型检查（低内存服务器上类型检查易 OOM，编译本身已通过）
   typescript: {
     ignoreBuildErrors: true,
   },
