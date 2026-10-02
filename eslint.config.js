@@ -1,4 +1,5 @@
 import tseslint from "typescript-eslint";
+import tseslint from "typescript-eslint";
 import pluginVue from "eslint-plugin-vue";
 import * as parserVue from "vue-eslint-parser";
 import configPrettier from "eslint-config-prettier";
