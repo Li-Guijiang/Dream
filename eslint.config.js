@@ -1,12 +1,14 @@
-import js from "@eslint/js";
+import tseslint from "typescript-eslint";
 import tseslint from "typescript-eslint";
 import pluginVue from "eslint-plugin-vue";
 import * as parserVue from "vue-eslint-parser";
 import configPrettier from "eslint-config-prettier";
 import pluginPrettier from "eslint-plugin-prettier";
 import { defineConfig, globalIgnores } from "eslint/config";
+
 import eslintPluginBetterTailwindcss from "eslint-plugin-better-tailwindcss";
 
+import js from "@eslint/js";
 export default defineConfig([
   globalIgnores([
     "**/.*",

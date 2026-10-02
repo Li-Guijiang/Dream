@@ -5,7 +5,6 @@ import java.io.BufferedReader;
 import java.sql.Connection;
 import java.io.FileReader;
 import java.math.BigDecimal;
-import java.math.sql.mathtype;
 import java.text.SimpleDateFormat;
 import java.sql.PreparedStatement;
 
@@ -49,7 +48,6 @@ public class DataProcess {
                 // ===================== 核心：数据强制转换（任务2）=====================
                 // 1. 网站名称/商品名称：String类型，无需转换
                 String shopWebsite = fields[0].trim();
-                String productName = fields[1].trim();
                       String productName = fields[1].trim();
                 // 2. 价格：String → BigDecimal（对应MySQL的DECIMAL(10,2)类型）
                 BigDecimal price = new BigDecimal(fields[2].trim());
@@ -61,18 +59,7 @@ public class DataProcess {
                 Integer buyCount = Integer.valueOf(fields[4].trim());
                 // ========================================================================
 
-                // 给SQL占位符赋值
-                pstmt.setString(1, shopWebsite);
-            
-                pstmt.setBigDecimal(3, price);
-                  pstmt.setString(2, productName);
-                pstmt.setTimestamp(4, onShelfTime);
-           
-                  pstmt.setInt(5, buyCount);
-                // 添加到批量执行队列
-                pstmt.addBatch();
-                successCount++;
-
+      
                 // 每100条执行一次批量插入（匹配任务要求）
                 if (successCount % 100 == 0) {
                     pstmt.executeBatch();
@@ -89,7 +76,7 @@ public class DataProcess {
             e.printStackTrace();
         } finally {
             // 关闭数据库连接
-            DBUtil.close(conn);
+         
         }
     }
 }

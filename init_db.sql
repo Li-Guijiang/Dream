@@ -29,18 +29,17 @@ CREATE TABLE IF NOT EXISTS category (
     post_count    INTEGER      DEFAULT 0,
     created_at    TIMESTAMP    DEFAULT NOW(),
     updated_at    TIMESTAMP    DEFAULT NOW()
-);
+);CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
 
--- ============================================
--- 3. Tag（标签）
--- ============================================
 CREATE TABLE IF NOT EXISTS tag (
     id            SERIAL PRIMARY KEY,
     name          VARCHAR(50)  UNIQUE NOT NULL,
     slug          VARCHAR(50)  UNIQUE NOT NULL,
     post_count    INTEGER      DEFAULT 0
 );
-
+create index if not exists idx;
+CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
+-- ============================================
 -- ============================================
 -- 4. Post（文章）
 -- ============================================
@@ -62,20 +61,17 @@ CREATE TABLE IF NOT EXISTS post (
     created_at    TIMESTAMP    DEFAULT NOW(),
     updated_at    TIMESTAMP    DEFAULT NOW()
 );
-
-CREATE INDEX IF NOT EXISTS idx_post_slug ON post(slug);
 CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
-CREATE INDEX IF NOT EXISTS idx_post_category ON post(category_id);
-
+CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
 -- ============================================
 -- 5. PostTag（文章-标签 中间表）
 -- ============================================
 CREATE TABLE IF NOT EXISTS post_tag (
     post_id       INTEGER NOT NULL REFERENCES post(id) ON DELETE CASCADE,
-    tag_id        INTEGER NOT NULL REFERENCES tag(id)  ON DELETE CASCADE,
+    
     PRIMARY KEY (post_id, tag_id)
 );
-
+CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
 -- ============================================
 -- 6. GitHubUser（GitHub 登录用户）
 -- ============================================
@@ -87,9 +83,10 @@ CREATE TABLE IF NOT EXISTS github_user (
     bio           VARCHAR(500) DEFAULT '',
     created_at    TIMESTAMP    DEFAULT NOW()
 );
-
+CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
+-- ============================================
 CREATE INDEX IF NOT EXISTS idx_github_user_id ON github_user(github_id);
-
+create index if not exists idx_github_id NO github_user(login);
 -- ============================================
 -- 7. Comment（文章评论 — GitHub 登录）
 -- ============================================
@@ -104,11 +101,10 @@ CREATE TABLE IF NOT EXISTS comment (
     status          VARCHAR(20)  DEFAULT 'approved',
     created_at      TIMESTAMP    DEFAULT NOW()
 );
-
+create index idx_comment_post;
 CREATE INDEX IF NOT EXISTS idx_comment_post ON comment(post_id);
 CREATE INDEX IF NOT EXISTS idx_comment_status ON comment(status);
 CREATE INDEX IF NOT EXISTS idx_comment_github_user ON comment(github_user_id);
-
 -- ============================================
 -- 8. Message（留言板/杂谈）
 -- ============================================
@@ -125,7 +121,6 @@ CREATE TABLE IF NOT EXISTS message (
 
 CREATE INDEX IF NOT EXISTS idx_message_status ON message(status);
 CREATE INDEX IF NOT EXISTS idx_message_parent ON message(parent_id);
-CREATE INDEX IF NOT EXISTS idx_message_github_user ON message(github_user_id);
 
 -- ============================================
 -- 9. Chatter（说说/微语）
@@ -191,6 +186,7 @@ CREATE TABLE IF NOT EXISTS photo (
 );
 
 CREATE INDEX IF NOT EXISTS idx_photo_album ON photo(album_id);
+CREATE INDEX IF NOT EXISTS idx_chatter_comment_github_user ON chatter_comment(github_user_id);
 
 -- ============================================
 -- 13. Project（项目展示）
