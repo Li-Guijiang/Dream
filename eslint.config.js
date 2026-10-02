@@ -4,6 +4,7 @@ import * as parserVue from "vue-eslint-parser";
 import configPrettier from "eslint-config-prettier";
 import pluginPrettier from "eslint-plugin-prettier";
 import { defineConfig, globalIgnores } from "eslint/config";
+
 import eslintPluginBetterTailwindcss from "eslint-plugin-better-tailwindcss";
 
 import js from "@eslint/js";
