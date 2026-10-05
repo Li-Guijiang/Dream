@@ -1,5 +1,4 @@
 
-    nickname      VARCHAR(50)  DEFAULT '',
     avatar        VARCHAR(500) DEFAULT '',
     email         VARCHAR(100) DEFAULT '',
     bio           VARCHAR(500) DEFAULT '',
