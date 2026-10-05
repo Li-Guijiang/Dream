@@ -1,5 +1,4 @@
 
-    id            SERIAL PRIMARY KEY,
     username      VARCHAR(50)  UNIQUE NOT NULL,
     hashed_password VARCHAR(128) NOT NULL,
     nickname      VARCHAR(50)  DEFAULT '',
