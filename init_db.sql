@@ -4,7 +4,7 @@
     bio           VARCHAR(500) DEFAULT '',
     is_admin      BOOLEAN      DEFAULT FALSE,
     created_at    TIMESTAMP    DEFAULT NOW(),
-    updated_at    TIMESTAMP    DEFAULT NOW()
+
 -- ============================================
 -- 2. Category（分类）
 -- ============================================
@@ -51,6 +51,7 @@ CREATE TABLE IF NOT EXISTS post (
 );
 CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
 CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
+
 -- ============================================
 -- 5. PostTag（文章-标签 中间表）
 -- ============================================
