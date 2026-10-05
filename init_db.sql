@@ -4,7 +4,6 @@
 -- ============================================
 -- 1. User（用户/管理员）
 -- ============================================
-CREATE TABLE IF NOT EXISTS "user" (
     id            SERIAL PRIMARY KEY,
     username      VARCHAR(50)  UNIQUE NOT NULL,
     hashed_password VARCHAR(128) NOT NULL,
