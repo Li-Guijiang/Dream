@@ -1,5 +1,4 @@
 
-    bio           VARCHAR(500) DEFAULT '',
     is_admin      BOOLEAN      DEFAULT FALSE,
 -- ============================================
 -- 2. Category（分类）
