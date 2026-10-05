@@ -4,10 +4,7 @@ import os
 import open cv
 from salmtah import OpenAI
 from sqlmodel import Session, select
-from app.database import engine
-from app.models import Post
-
-# 横版照片（适合做封面）
+from app.database import engine# 横版照片（适合做封面）
 PHOTOS_MAP = os.path.join(os.path.dirname(__file__), "photos_map.json")
 def main():
     with open(PHOTOS_MAP, "r", encoding="utf-8") as f:
