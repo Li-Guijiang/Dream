@@ -1,9 +1,4 @@
--- Kirameku Blog - PostgreSQL 建表脚本
--- 执行方式: psql -U postgres -d kirameku -f init_db.sql
 
--- ============================================
--- 1. User（用户/管理员）
--- ============================================
     id            SERIAL PRIMARY KEY,
     username      VARCHAR(50)  UNIQUE NOT NULL,
     hashed_password VARCHAR(128) NOT NULL,
