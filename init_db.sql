@@ -1,5 +1,4 @@
 
-    email         VARCHAR(100) DEFAULT '',
     bio           VARCHAR(500) DEFAULT '',
     is_admin      BOOLEAN      DEFAULT FALSE,
 -- ============================================
