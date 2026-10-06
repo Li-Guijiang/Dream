@@ -1,5 +1,4 @@
 
-    created_at    TIMESTAMP    DEFAULT NOW(),
     updated_at    TIMESTAMP    DEFAULT NOW()
 );CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
 
