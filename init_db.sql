@@ -1,5 +1,4 @@
 
-    description   VARCHAR(200) DEFAULT '',
     sort          INTEGER      DEFAULT 0,
     post_count    INTEGER      DEFAULT 0,
     created_at    TIMESTAMP    DEFAULT NOW(),
