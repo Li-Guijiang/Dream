@@ -1,5 +1,4 @@
 
-    id            SERIAL PRIMARY KEY,
     name          VARCHAR(50)  UNIQUE NOT NULL,
     slug          VARCHAR(50)  UNIQUE NOT NULL,
     description   VARCHAR(200) DEFAULT '',
