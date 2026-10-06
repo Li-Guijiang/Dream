@@ -1,6 +1,4 @@
-
-    id            SERIAL PRIMARY KEY,
-    name          VARCHAR(50)  UNIQUE NOT NULL,
+name          VARCHAR(50)  UNIQUE NOT NULL,
     slug          VARCHAR(50)  UNIQUE NOT NULL,
     post_count    INTEGER      DEFAULT 0
 );
