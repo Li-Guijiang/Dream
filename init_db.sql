@@ -1,4 +1,4 @@
-name          VARCHAR(50)  UNIQUE NOT NULL,
+
     slug          VARCHAR(50)  UNIQUE NOT NULL,
     post_count    INTEGER      DEFAULT 0
 );
