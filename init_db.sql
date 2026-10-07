@@ -1,5 +1,4 @@
 
-    word_count    INTEGER      DEFAULT 0,
     reading_time  INTEGER      DEFAULT 0,
     published_at  TIMESTAMP,
     created_at    TIMESTAMP    DEFAULT NOW(),
