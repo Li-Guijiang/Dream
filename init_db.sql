@@ -1,4 +1,4 @@
-    views         INTEGER      DEFAULT 0,
+
     likes         INTEGER      DEFAULT 0,
     word_count    INTEGER      DEFAULT 0,
     reading_time  INTEGER      DEFAULT 0,
