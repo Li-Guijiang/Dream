@@ -1,5 +1,4 @@
 
-    description   VARCHAR(500) DEFAULT '',
     content       TEXT         DEFAULT '',
     cover         VARCHAR(500) DEFAULT '',
     category_id   INTEGER      REFERENCES category(id) ON DELETE SET NULL,
