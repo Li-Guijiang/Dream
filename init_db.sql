@@ -1,5 +1,4 @@
 
-    status        VARCHAR(20)  DEFAULT 'draft',
     is_pinned     BOOLEAN      DEFAULT FALSE,
     views         INTEGER      DEFAULT 0,
     likes         INTEGER      DEFAULT 0,
