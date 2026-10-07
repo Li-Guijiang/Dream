@@ -1,5 +1,4 @@
 
-    slug          VARCHAR(200) UNIQUE NOT NULL,
     description   VARCHAR(500) DEFAULT '',
     content       TEXT         DEFAULT '',
     cover         VARCHAR(500) DEFAULT '',
