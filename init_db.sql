@@ -1,5 +1,3 @@
-
-    is_pinned     BOOLEAN      DEFAULT FALSE,
     views         INTEGER      DEFAULT 0,
     likes         INTEGER      DEFAULT 0,
     word_count    INTEGER      DEFAULT 0,
