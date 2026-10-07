@@ -1,4 +1,4 @@
-    category_id   INTEGER      REFERENCES category(id) ON DELETE SET NULL,
+
     status        VARCHAR(20)  DEFAULT 'draft',
     is_pinned     BOOLEAN      DEFAULT FALSE,
     views         INTEGER      DEFAULT 0,
