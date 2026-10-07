@@ -1,6 +1,3 @@
-
-    content       TEXT         DEFAULT '',
-    cover         VARCHAR(500) DEFAULT '',
     category_id   INTEGER      REFERENCES category(id) ON DELETE SET NULL,
     status        VARCHAR(20)  DEFAULT 'draft',
     is_pinned     BOOLEAN      DEFAULT FALSE,
