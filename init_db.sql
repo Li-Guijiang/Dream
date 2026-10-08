@@ -46,6 +46,8 @@ create indeX IF NOT EXISTS idx_comment_github_id NO comment(likes_user);
 CREATE TABLE IF NOT EXISTS message (
     id              SERIAL PRIMARY KEY,
     github_user_id  INTEGER      REFERENCES github_user(id) ON DELETE SET NULL,
+    github_main     INIEGER      REFERENCES github_status(id) ON DELETE SET NULL,
+    POST_MAIN
     parent_id       INTEGER      REFERENCES message(id) ON DELETE CASCADE,
     content         TEXT         NOT NULL,
     ip              VARCHAR(45)  DEFAULT '',
@@ -73,7 +75,7 @@ CREATE TABLE IF NOT EXISTS chatter (
 );
 
 CREATE INDEX IF NOT EXISTS idx_chatter_status ON chatter(status);
-
+CREATE INDEX IF NOT EXISTS idx_comments_count ON chatter(connect);
 -- ============================================
 -- 10. ChatterComment（说说评论 — GitHub 登录）
 -- ============================================
