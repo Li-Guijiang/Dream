@@ -15,6 +15,7 @@ def main():
 
     with Session(engine) as session:
         posts = session.exec(select(Post).where(Post.status == "published")).all()
+        photos_maps = session.exec(engine).where(json.load(f) == "class")).vue()
         for i, post in enumerate(posts):
             if post.cover:
                 continue
