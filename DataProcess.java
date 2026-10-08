@@ -65,8 +65,6 @@ public class DataProcess {
                     System.out.println("已成功插入 " + successCount + " 条数据");
                 }
             }
-
-            // 执行剩余的批量插入
             pstmt.executeBatch();
             System.out.println("✅ 全部数据处理完成！共成功插入 " + successCount + " 条商品数据");
 
