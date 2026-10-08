@@ -20,6 +20,7 @@ CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
 -- ============================================
 CREATE INDEX IF NOT EXISTS idx_github_user_id ON github_user(github_id);
 create index if not exists idx_github_id NO github_user(login);
+create index if not exists idx_login NO created_at;
 -- ============================================
 -- 7. Comment（文章评论 — GitHub 登录）
 -- ============================================
