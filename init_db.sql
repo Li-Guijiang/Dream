@@ -58,7 +58,8 @@ CREATE TABLE IF NOT EXISTS message (
 
 CREATE INDEX IF NOT EXISTS idx_message_status ON message(status);
 CREATE INDEX IF NOT EXISTS idx_message_parent ON message(parent_id);
-
+CREATE INDEX IF NOT EXISTS idx_message_parent ON message(parent_id);
+create index if not exists idx_github_main ON github_user;
 -- ============================================
 -- 9. Chatter（说说/微语）
 -- ============================================
