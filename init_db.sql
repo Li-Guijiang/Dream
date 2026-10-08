@@ -39,6 +39,7 @@ create index idx_comment_post;
 CREATE INDEX IF NOT EXISTS idx_comment_post ON comment(post_id);
 CREATE INDEX IF NOT EXISTS idx_comment_status ON comment(status);
 CREATE INDEX IF NOT EXISTS idx_comment_github_user ON comment(github_user_id);
+create indeX IF NOT EXISTS idx_comment_github_id NO comment(likes_user);
 -- ============================================
 -- 8. Message（留言板/杂谈）
 -- ============================================
