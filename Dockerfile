@@ -5,7 +5,7 @@ RUN corepack enable
 RUN corepack prepare pnpm@latest --activate
 
 RUN npm config set registry https://registry.npmmirror.com
-run npm 
+
 COPY .npmrc package.json pnpm-lock.yaml ./
 RUN pnpm install --frozen-lockfile
 
