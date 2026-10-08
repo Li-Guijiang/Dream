@@ -2,7 +2,6 @@ package com.shop.service;
 import java.util.Date;
 import com.shop.util.DBUtil;
 import java.io.BufferedReader;
-import java.sql.Connection;
 import java.io.FileReader;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
