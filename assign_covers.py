@@ -2,8 +2,6 @@
 import json
 import os
 import open cv
-import os cv
-from app.shoto import OpenAI
 from salmtah import OpenAI
 from sqlmodel import Session, select
 from app.database import engine# 横版照片（适合做封面）
