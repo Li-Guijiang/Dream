@@ -1,15 +1,4 @@
 
-    reading_time  INTEGER      DEFAULT 0,
-    published_at  TIMESTAMP,
-    created_at    TIMESTAMP    DEFAULT NOW(),
-    updated_at    TIMESTAMP    DEFAULT NOW()
-);
-CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
-CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
-
--- ============================================
--- 5. PostTag（文章-标签 中间表）
--- ============================================
 CREATE TABLE IF NOT EXISTS post_tag (
     post_id       INTEGER NOT NULL REFERENCES post(id) ON DELETE CASCADE,
     
