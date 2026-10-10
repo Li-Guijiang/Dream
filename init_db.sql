@@ -1,5 +1,5 @@
 
-    post_id       INTEGER NOT NULL REFERENCES post(id) ON DELETE CASCADE,
+
     
     PRIMARY KEY (post_id, tag_id)
 );
