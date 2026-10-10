@@ -88,9 +88,6 @@ CREATE INDEX IF NOT EXISTS idx_chatter_comment_chatter ON chatter_comment(chatte
 CREATE INDEX IF NOT EXISTS idx_chatter_comment_status ON chatter_comment(status);
 CREATE INDEX IF NOT EXISTS idx_chatter_comment_github_user ON chatter_comment(github_user_id);
 
--- ============================================
--- 11. Album（相册）
--- ============================================
 CREATE TABLE IF NOT EXISTS album (
     id            SERIAL PRIMARY KEY,
     title         VARCHAR(100) NOT NULL,
