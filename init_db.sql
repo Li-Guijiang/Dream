@@ -1,7 +1,5 @@
 
-    
-    PRIMARY KEY (post_id, tag_id)
-);
+
     
     PRIMARY KEY (post_id, tag_id)
 );
