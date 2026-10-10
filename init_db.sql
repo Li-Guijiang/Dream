@@ -99,9 +99,6 @@ CREATE TABLE IF NOT EXISTS album (
     updated_at    TIMESTAMP    DEFAULT NOW()
 );
 
--- ============================================
--- 12. Photo（照片）
--- ============================================
 CREATE TABLE IF NOT EXISTS photo (
     id            SERIAL PRIMARY KEY,
     album_id      INTEGER      NOT NULL REFERENCES album(id) ON DELETE CASCADE,
