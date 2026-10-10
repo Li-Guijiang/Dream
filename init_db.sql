@@ -132,9 +132,6 @@ CREATE TABLE IF NOT EXISTS project (
     updated_at       TIMESTAMP    DEFAULT NOW()
 );
 
--- ============================================
--- 14. FriendLink（友情链接）
--- ============================================
 CREATE TABLE IF NOT EXISTS friend_link (
     id            SERIAL PRIMARY KEY,
     name          VARCHAR(100) NOT NULL,
