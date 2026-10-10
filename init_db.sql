@@ -6,9 +6,7 @@
     PRIMARY KEY (post_id, tag_id)
 );
 CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
--- ============================================
--- 6. GitHubUser（GitHub 登录用户）
--- ============================================
+
 CREATE TABLE IF NOT EXISTS github_user (
     id            SERIAL PRIMARY KEY,
     github_id     INTEGER      UNIQUE NOT NULL,
