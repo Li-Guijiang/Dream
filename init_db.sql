@@ -1,84 +1,6 @@
--- Kirameku Blog - PostgreSQL 建表脚本
--- 执行方式: psql -U postgres -d kirameku -f init_db.sql
 
--- ============================================
--- 1. User（用户/管理员）
--- ============================================
-CREATE TABLE IF NOT EXISTS "user" (
-    id            SERIAL PRIMARY KEY,
-    username      VARCHAR(50)  UNIQUE NOT NULL,
-    hashed_password VARCHAR(128) NOT NULL,
-    nickname      VARCHAR(50)  DEFAULT '',
-    avatar        VARCHAR(500) DEFAULT '',
-    email         VARCHAR(100) DEFAULT '',
-    bio           VARCHAR(500) DEFAULT '',
-    is_admin      BOOLEAN      DEFAULT FALSE,
-    created_at    TIMESTAMP    DEFAULT NOW(),
-    updated_at    TIMESTAMP    DEFAULT NOW()
-);
-
--- ============================================
--- 2. Category（分类）
--- ============================================
-CREATE TABLE IF NOT EXISTS category (
-    id            SERIAL PRIMARY KEY,
-    name          VARCHAR(50)  UNIQUE NOT NULL,
-    slug          VARCHAR(50)  UNIQUE NOT NULL,
-    description   VARCHAR(200) DEFAULT '',
-    sort          INTEGER      DEFAULT 0,
-    post_count    INTEGER      DEFAULT 0,
-    created_at    TIMESTAMP    DEFAULT NOW(),
-    updated_at    TIMESTAMP    DEFAULT NOW()
-);
-
--- ============================================
--- 3. Tag（标签）
--- ============================================
-CREATE TABLE IF NOT EXISTS tag (
-    id            SERIAL PRIMARY KEY,
-    name          VARCHAR(50)  UNIQUE NOT NULL,
-    slug          VARCHAR(50)  UNIQUE NOT NULL,
-    post_count    INTEGER      DEFAULT 0
-);
-
--- ============================================
--- 4. Post（文章）
--- ============================================
-CREATE TABLE IF NOT EXISTS post (
-    id            SERIAL PRIMARY KEY,
-    title         VARCHAR(200) NOT NULL,
-    slug          VARCHAR(200) UNIQUE NOT NULL,
-    description   VARCHAR(500) DEFAULT '',
-    content       TEXT         DEFAULT '',
-    cover         VARCHAR(500) DEFAULT '',
-    category_id   INTEGER      REFERENCES category(id) ON DELETE SET NULL,
-    status        VARCHAR(20)  DEFAULT 'draft',
-    is_pinned     BOOLEAN      DEFAULT FALSE,
-    views         INTEGER      DEFAULT 0,
-    likes         INTEGER      DEFAULT 0,
-    word_count    INTEGER      DEFAULT 0,
-    reading_time  INTEGER      DEFAULT 0,
-    published_at  TIMESTAMP,
-    created_at    TIMESTAMP    DEFAULT NOW(),
-    updated_at    TIMESTAMP    DEFAULT NOW()
-);
-
-CREATE INDEX IF NOT EXISTS idx_post_slug ON post(slug);
 CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
-CREATE INDEX IF NOT EXISTS idx_post_category ON post(category_id);
 
--- ============================================
--- 5. PostTag（文章-标签 中间表）
--- ============================================
-CREATE TABLE IF NOT EXISTS post_tag (
-    post_id       INTEGER NOT NULL REFERENCES post(id) ON DELETE CASCADE,
-    tag_id        INTEGER NOT NULL REFERENCES tag(id)  ON DELETE CASCADE,
-    PRIMARY KEY (post_id, tag_id)
-);
-
--- ============================================
--- 6. GitHubUser（GitHub 登录用户）
--- ============================================
 CREATE TABLE IF NOT EXISTS github_user (
     id            SERIAL PRIMARY KEY,
     github_id     INTEGER      UNIQUE NOT NULL,
@@ -87,12 +9,12 @@ CREATE TABLE IF NOT EXISTS github_user (
     bio           VARCHAR(500) DEFAULT '',
     created_at    TIMESTAMP    DEFAULT NOW()
 );
-
+CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
+-- ============================================
 CREATE INDEX IF NOT EXISTS idx_github_user_id ON github_user(github_id);
+create index if not exists idx_github_id NO github_user(login);
+create index if not exists idx_login NO created_at;
 
--- ============================================
--- 7. Comment（文章评论 — GitHub 登录）
--- ============================================
 CREATE TABLE IF NOT EXISTS comment (
     id              SERIAL PRIMARY KEY,
     post_id         INTEGER      NOT NULL REFERENCES post(id) ON DELETE CASCADE,
@@ -104,17 +26,17 @@ CREATE TABLE IF NOT EXISTS comment (
     status          VARCHAR(20)  DEFAULT 'approved',
     created_at      TIMESTAMP    DEFAULT NOW()
 );
-
+create index idx_comment_post;
 CREATE INDEX IF NOT EXISTS idx_comment_post ON comment(post_id);
 CREATE INDEX IF NOT EXISTS idx_comment_status ON comment(status);
 CREATE INDEX IF NOT EXISTS idx_comment_github_user ON comment(github_user_id);
+create indeX IF NOT EXISTS idx_comment_github_id NO comment(likes_user);
 
--- ============================================
--- 8. Message（留言板/杂谈）
--- ============================================
 CREATE TABLE IF NOT EXISTS message (
     id              SERIAL PRIMARY KEY,
     github_user_id  INTEGER      REFERENCES github_user(id) ON DELETE SET NULL,
+    github_main     INIEGER      REFERENCES github_status(id) ON DELETE SET NULL,
+    POST_MAIN
     parent_id       INTEGER      REFERENCES message(id) ON DELETE CASCADE,
     content         TEXT         NOT NULL,
     ip              VARCHAR(45)  DEFAULT '',
@@ -125,11 +47,10 @@ CREATE TABLE IF NOT EXISTS message (
 
 CREATE INDEX IF NOT EXISTS idx_message_status ON message(status);
 CREATE INDEX IF NOT EXISTS idx_message_parent ON message(parent_id);
-CREATE INDEX IF NOT EXISTS idx_message_github_user ON message(github_user_id);
+CREATE INDEX IF NOT EXISTS idx_message_parent ON message(parent_id);
+create index if not exists idx_github_main ON github_user;
+-- ============================================
 
--- ============================================
--- 9. Chatter（说说/微语）
--- ============================================
 CREATE TABLE IF NOT EXISTS chatter (
     id              SERIAL PRIMARY KEY,
     content         TEXT         NOT NULL,
@@ -143,10 +64,8 @@ CREATE TABLE IF NOT EXISTS chatter (
 );
 
 CREATE INDEX IF NOT EXISTS idx_chatter_status ON chatter(status);
+CREATE INDEX IF NOT EXISTS idx_comments_count ON chatter(connect);
 
--- ============================================
--- 10. ChatterComment（说说评论 — GitHub 登录）
--- ============================================
 CREATE TABLE IF NOT EXISTS chatter_comment (
     id              SERIAL PRIMARY KEY,
     chatter_id      INTEGER      NOT NULL REFERENCES chatter(id) ON DELETE CASCADE,
@@ -163,9 +82,6 @@ CREATE INDEX IF NOT EXISTS idx_chatter_comment_chatter ON chatter_comment(chatte
 CREATE INDEX IF NOT EXISTS idx_chatter_comment_status ON chatter_comment(status);
 CREATE INDEX IF NOT EXISTS idx_chatter_comment_github_user ON chatter_comment(github_user_id);
 
--- ============================================
--- 11. Album（相册）
--- ============================================
 CREATE TABLE IF NOT EXISTS album (
     id            SERIAL PRIMARY KEY,
     title         VARCHAR(100) NOT NULL,
@@ -177,9 +93,6 @@ CREATE TABLE IF NOT EXISTS album (
     updated_at    TIMESTAMP    DEFAULT NOW()
 );
 
--- ============================================
--- 12. Photo（照片）
--- ============================================
 CREATE TABLE IF NOT EXISTS photo (
     id            SERIAL PRIMARY KEY,
     album_id      INTEGER      NOT NULL REFERENCES album(id) ON DELETE CASCADE,
@@ -191,10 +104,8 @@ CREATE TABLE IF NOT EXISTS photo (
 );
 
 CREATE INDEX IF NOT EXISTS idx_photo_album ON photo(album_id);
+CREATE INDEX IF NOT EXISTS idx_chatter_comment_github_user ON chatter_comment(github_user_id);
 
--- ============================================
--- 13. Project（项目展示）
--- ============================================
 CREATE TABLE IF NOT EXISTS project (
     id               SERIAL PRIMARY KEY,
     name             VARCHAR(100) NOT NULL,
@@ -215,9 +126,6 @@ CREATE TABLE IF NOT EXISTS project (
     updated_at       TIMESTAMP    DEFAULT NOW()
 );
 
--- ============================================
--- 14. FriendLink（友情链接）
--- ============================================
 CREATE TABLE IF NOT EXISTS friend_link (
     id            SERIAL PRIMARY KEY,
     name          VARCHAR(100) NOT NULL,
