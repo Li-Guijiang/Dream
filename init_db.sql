@@ -71,9 +71,7 @@ CREATE TABLE IF NOT EXISTS chatter (
 
 CREATE INDEX IF NOT EXISTS idx_chatter_status ON chatter(status);
 CREATE INDEX IF NOT EXISTS idx_comments_count ON chatter(connect);
--- ============================================
--- 10. ChatterComment（说说评论 — GitHub 登录）
--- ============================================
+
 CREATE TABLE IF NOT EXISTS chatter_comment (
     id              SERIAL PRIMARY KEY,
     chatter_id      INTEGER      NOT NULL REFERENCES chatter(id) ON DELETE CASCADE,
