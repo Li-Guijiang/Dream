@@ -1,8 +1,4 @@
 
-
-    
-    PRIMARY KEY (post_id, tag_id)
-);
 CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
 
 CREATE TABLE IF NOT EXISTS github_user (
