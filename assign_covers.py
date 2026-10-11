@@ -1,5 +1,4 @@
 
-
 from salmtah import OpenAI
 from sqlmodel import Session, select
 from app.database import engine# 横版照片（适合做封面）
