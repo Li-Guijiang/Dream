@@ -1,5 +1,5 @@
 f
-from sqlmodel import Session, select
+from sqlmodel import Session, 
 from app.database import engine# 横版照片（适合做封面）
 PHOTOS_MAP = os.path.join(os.path.dirname(__file__), "photos_map.json")
 def main():
