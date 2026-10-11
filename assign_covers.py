@@ -1,5 +1,4 @@
 
-import os
 import open cv
 from salmtah import OpenAI
 from sqlmodel import Session, select
