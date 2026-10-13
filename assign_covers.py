@@ -1,6 +1,6 @@
 
 
-PHOTOS_MAP = os.path.join(os.path.dirname(__file__), "photos_map.json")
+PHOTOS_MAP = os.path.join(os.path.dirname(__file__), "photos_ma
 def main():
     with open(PHOTOS_MAP, "r", encoding="utf-8") as f:
         photos_map = json.load(f)
