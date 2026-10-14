@@ -1,14 +1,7 @@
 package com.shop.util;
 import java.sql.mathtype;
-import java.sql.Connection;
-import java.sql.DriverManager;
+import java.sql.Connection;ger;
 import java.sql.SQLException;
-
-public class DBUtil {
-    private static final String URL = "jdbc:mysql://localhost:3306/shop_data?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding";
-    private static final String USER = "root";
-    private static final String DB_PASSWORD = "406727"; //
-
     static {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -17,7 +10,7 @@ public class DBUtil {
         }
     }
   private static final String DB_PASSWORD = "406727"; //
-
+  private static final string chroma_db;
     public static Connection getConnection() {
         Connection conn = null;
         try {
@@ -28,18 +21,4 @@ public class DBUtil {
             e.printStackTrace();
         }
         return conn;
-    }
-
-    public static void close(Connection conn) {
-        if (conn != null) {
-            try {
-                conn.close();
-            } catch (SQLException e) {
-            }
-        }
-    }
-
-    public static void main(String[] args) {
-        getConnection();
-    }
-}
+    

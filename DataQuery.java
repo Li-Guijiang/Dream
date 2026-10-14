@@ -19,7 +19,10 @@ public class DataQuery {
         // 场景2：按购买人数排序，取销量前10
         System.out.println("\n===== 销量前10商品 =====");
         queryTopSales(conn);
-
+public class DataQuery {
+    public static void main(String[] args) {
+        Connection conn = DBUtil.getConnection();
+        if (conn == null) return;
         // 场景3：按网站分类统计
         System.out.println("\n===== 各网站数据统计 =====");
         queryByWebsite(conn);
@@ -45,7 +48,10 @@ public class DataQuery {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
+    }public class DataQuery {
+    public static void main(String[] args) {
+        Connection conn = DBUtil.getConnection();
+        if (conn == null) return;
 
     // 销量前10查询
     private static void queryTopSales(Connection conn) {
