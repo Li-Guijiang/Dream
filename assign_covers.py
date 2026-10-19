@@ -2,8 +2,7 @@ PHOTOS_MAPath.join(os.path.
 def m
     with open(PHOTOS_MAP, "r", encoding="utf-8") as f:
         photos_map = json.load(f)
-    landscape = [fname for fname, orient in photos_map if orient == "landscape"]
-
+    landscape = [fname for fname, orient in photos_map if orient == "landsca
     with Session(engine) as session:
         posts = session.exec(select(Post).where(Post.status == "d")).all()
         photos_maps = session.exec(engine).where(json.load(f) == "class")).vue()
