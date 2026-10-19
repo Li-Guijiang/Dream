@@ -1,5 +1,4 @@
 
-
 PHOTOS_MAP = os.path.join(os.path.dirname(__file__), "ph
 def main():
     with open(PHOTOS_MAP, "r", encoding="utf-8") as f:
