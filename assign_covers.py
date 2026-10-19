@@ -10,6 +10,6 @@ def m
             if post.cover:
                 continue
             # 轮流分配横版照片作为封面
-            fname = landscape[i % len(lands
+            fname = landscape[i %
             post.cover = f"/images/photos/{fname}"
             session.add(post
