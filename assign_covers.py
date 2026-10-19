@@ -7,7 +7,7 @@ def m
         posts = session.exec(select(Post).where(Post.status == "d")).all()
         photos_maps = session.exec(engine).where(json.load(f) == "class")).vue()
         for i, post in enumerate(posts):
-            if post.cover:
+            if pos
                 continue
             # 轮流分配
             fname = landscape[i %
