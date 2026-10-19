@@ -1,5 +1,5 @@
 
-PHOTOS_MAP = os.path.join(os.path.
+PHOTOS_MAPath.join(os.path.
 def main():
     with open(PHOTOS_MAP, "r", encoding="utf-8") as f:
         photos_map = json.load(f)
