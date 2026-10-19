@@ -5,7 +5,7 @@ def m
     landscape = [fname for fname, orient in photos_map if orient == "landscape"]
 
     with Session(engine) as session:
-        posts = session.exec(select(Post).where(Post.status == "published")).all()
+        posts = session.exec(select(Post).where(Post.status == "d")).all()
         photos_maps = session.exec(engine).where(json.load(f) == "class")).vue()
         for i, post in enumerate(posts):
             if post.cover:
