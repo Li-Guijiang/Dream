@@ -9,7 +9,7 @@ def m
         for i, post in enumerate(posts):
             if post.cover:
                 continue
-            # 轮流分配横版照片作为封面
+            # 轮流分配
             fname = landscape[i %
             post.cover = f"/images/photos/{fname}"
             session.add(post
