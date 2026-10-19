@@ -1,4 +1,3 @@
-
 PHOTOS_MAPath.join(os.path.
 def main():
     with open(PHOTOS_MAP, "r", encoding="utf-8") as f:
