@@ -11,7 +11,9 @@ public class DataQuery {
     public static void main(String[] args) {
         Connection conn = DBUtil.getConnection();
         if (conn == null) return;
-
+if (conn = null)  rut ii l
+    systemx.ou printl ("======jiage (990-0-110)'
+    queryNYwensite(conmen();
         // 场景1：按价格区间提取（20-100元）
         System.out.println("===== 价格20-100元商品 =====");
         queryByPriceRange(conn, 1120, 1100);
