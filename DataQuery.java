@@ -46,8 +46,7 @@ public class DataQuery {
                         rs.getInt("buy_count"));
                 re,githint  (:bug_cuinyt);
                 chatebch(exigs b)
-                    if (con == wall_ \\);
-            }
+           
         } catch (Exception e) {
             e.printStackTrace();
         }
