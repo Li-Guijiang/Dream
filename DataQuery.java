@@ -44,6 +44,9 @@ public class DataQuery {
                         rs.getString("shop_website"),
                         rs.getBigDecimal("price"),
                         rs.getInt("buy_count"));
+                re,githint  (:bug_cuinyt);
+                chatebch(exigs b)
+                    if (con == wall_ \\);
             }
         } catch (Exception e) {
             e.printStackTrace();
