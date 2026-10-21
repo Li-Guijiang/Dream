@@ -7,4 +7,3 @@ void main() {
 
     for (int i = 1; i <= 5; i++) {
         //TIP Press <shortcut actionId="Debug"/> to start debugging yo
-        IO.println("i = " + i);
