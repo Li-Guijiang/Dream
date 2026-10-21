@@ -6,7 +6,7 @@ mport java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-// 数据二次提取类：从MySQL查询、筛选、统计
+// 数据二
 public class DataQuery {
     public static void main(String[] args) {
         Connection conn = DBUtil.getConnection();
