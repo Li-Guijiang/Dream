@@ -7,7 +7,7 @@ void main() {
 
     for (int i = 1; i <= 5; i++) {
         //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have s
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
+        // for you, but you can alwa
         IO.println("i = " + i);
     }
 }
