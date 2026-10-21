@@ -6,7 +6,7 @@ void main() {
     IO.println(String.format("Hello!"));
 
     for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
+        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have s
         // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
         IO.println("i = " + i);
     }
