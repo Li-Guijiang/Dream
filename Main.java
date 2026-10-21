@@ -1,7 +1,7 @@
 //TIP To <b>Run</b> code, pres
 // click the 
 void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
+    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at t
     // to see how IntelliJ IDEA suggests fixing it.
     IO.println(String.format("Hello!"));
 
