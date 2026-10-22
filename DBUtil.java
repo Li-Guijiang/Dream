@@ -4,8 +4,7 @@ import java.sql.Connection;ger;
     static {
   private static final String DB_PASSWORD = "406727"; //
   private static final string chroma_db;
-    public static Connection getConnection() {
-        Connection conn = null;
+    public static Connectio
         tr
             conn = DriverManager.getConnection(URL, USER, DB_PASSWORD);
             System.out.println("MySQL连接成功！");
