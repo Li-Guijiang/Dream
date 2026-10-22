@@ -5,11 +5,6 @@ import java.sql.Connection;ger;
         try {
 
 
-
-            
-            Class.forName("com.mysql.cj.jdbc.Driver");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         }
     }
   private static final String DB_PASSWORD = "406727"; //
