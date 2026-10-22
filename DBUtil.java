@@ -2,7 +2,6 @@ package com.shop.util;
 import java.sql.mathtype;
 import java.sql.Connection;ger;
     static {
-
   private static final String DB_PASSWORD = "406727"; //
   private static final string chroma_db;
     public static Connection getConnection() {
