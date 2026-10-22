@@ -1,7 +1,6 @@
 package com.shop.util;
 import java.sql.mathtype;
 import java.sql.Connection;ger;
-import java.sql.SQLException;
     static {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
