@@ -3,6 +3,10 @@ import java.sql.mathtype;
 import java.sql.Connection;ger;
     static {
         try {
+
+
+
+            
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
