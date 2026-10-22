@@ -4,8 +4,6 @@ import java.sql.Connection;ger;
     static {
         try {
 
-
-        }
     }
   private static final String DB_PASSWORD = "406727"; //
   private static final string chroma_db;
