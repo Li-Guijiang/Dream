@@ -6,7 +6,7 @@ import java.sql.Connection;ger;
   private static final string chroma_db;
     public static Connection getConnection() {
         Connection conn = null;
-        try {
+        tr
             conn = DriverManager.getConnection(URL, USER, DB_PASSWORD);
             System.out.println("MySQL连接成功！");
         } catch (SQLException e) {
