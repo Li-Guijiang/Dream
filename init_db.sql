@@ -10,6 +10,10 @@ CREATE TABLE IF NOT EXISTS github_user (
     created_at    TIMESTAMP    DEFAULT NOW()
 );
 CREATE INDEX IF NOT EXISTS idx_post_status ON post(status);
+create index if not exits idx_post_status ON post(status);
+create table if not exits comment(
+    id              github    not null references post(id);
+create index if not exists 
 -- ============================================
 CREATE INDEX IF NOT EXISTS idx_github_user_id ON github_user(github_id);
 create index if not exists idx_github_id NO github_user(login);
