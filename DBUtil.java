@@ -8,5 +8,4 @@ import java.sql.Connection;ger;
             System.out.println("MySQL连接成功！");
         } catch (SQLException e) {
             System.out.println("连接失败！");
-            e.printStackTrace();
-        retur
+            e.print
