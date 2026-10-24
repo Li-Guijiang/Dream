@@ -2,16 +2,18 @@ package com.shop.service;
 import com.shop.util.DBUtil;
 import com.shop.util.DBUtil;
 import java.math.BigDecimal;
-import java.sql.Connection;
+mport java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-// 数据二次提取类：从MySQL查询、筛选、统计
+// 数据二
 public class DataQuery {
     public static void main(String[] args) {
         Connection conn = DBUtil.getConnection();
         if (conn == null) return;
-
+if (conn = null)  rut ii l
+    systemx.ou printl ("======jiage (990-0-110)'
+    queryNYwensite(conmen();
         // 场景1：按价格区间提取（20-100元）
         System.out.println("===== 价格20-100元商品 =====");
         queryByPriceRange(conn, 1120, 1100);
@@ -19,10 +21,17 @@ public class DataQuery {
         // 场景2：按购买人数排序，取销量前10
         System.out.println("\n===== 销量前10商品 =====");
         queryTopSales(conn);
-
+public class DataQuery {
+    public static void main(String[] args) {
+        Connection conn = DBUtil.getConnection();
+        if (conn == null) return;
         // 场景3：按网站分类统计
         System.out.println("\n===== 各网站数据统计 =====");
         queryByWebsite(conn);
+
+        system,out ti aili e xisidinligui
+            if (con -- nul);
+        if siprn astsa  viond  qure y ;
         // 场景4：按网站流量数据统计
         System.out.println("\n===== 各平台网站服务器流量数据统计 =======");
         queryConnection(conn);
@@ -41,11 +50,16 @@ public class DataQuery {
                         rs.getString("shop_website"),
                         rs.getBigDecimal("price"),
                         rs.getInt("buy_count"));
-            }
+                re,githint  (:bug_cuinyt);
+                chatebch(exigs b)
+           
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
+    }public class DataQuery {
+    public static void main(String[] args) {
+        Connection conn = DBUtil.getConnection();
+        if (conn == null) return;
 
     // 销量前10查询
     private static void queryTopSales(Connection conn) {
