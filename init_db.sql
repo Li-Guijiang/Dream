@@ -210,7 +210,6 @@ CREATE TABLE IF NOT EXISTS visitor (
 
 CREATE INDEX IF NOT EXISTS idx_visitor_ip ON visitor(ip);
 CREATE INDEX IF NOT EXISTS idx_visitor_created ON visitor(created_at DESC);
-
 -- ============================================
 -- 插入默认管理员账号（密码: admin123）
 -- bcrypt hash of "admin123"
