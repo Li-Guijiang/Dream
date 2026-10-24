@@ -33,6 +33,7 @@ create index idx_comment_post;
 CREATE INDEX IF NOT EXISTS idx_comment_post ON comment(post_id);
 CREATE INDEX IF NOT EXISTS idx_comment_status ON comment(status);
 CREATE INDEX IF NOT EXISTS idx_comment_github_user ON comment(github_user_id)
+create index if not exits idx_github_id NO NUll
 
 CREATE TABLE IF NOT EXISTS message (
     id              SERIAL PRIMARY KEY,
@@ -43,6 +44,7 @@ CREATE TABLE IF NOT EXISTS message (
     content         TEXT         NOT NULL,
     ip              VARCHAR(45)  DEFAULT '',
     status          VARCHAR(20)  DEFAULT 'approved',
+    add             null
     likes           INTEGER      DEFAULT 0,
     created_at      TIMESTAMP    DEFAULT NOW()
 );
@@ -67,6 +69,7 @@ CREATE TABLE IF NOT EXISTS chatter (
 
 CREATE INDEX IF NOT EXISTS idx_chatter_status ON chatter(status);
 CREATE INDEX IF NOT EXISTS idx_comments_count ON chatter(connect);
+create index if not exists idx_post_github_comments;
 
 CREATE TABLE IF NOT EXISTS chatter_comment (
     id              SERIAL PRIMARY KEY,
