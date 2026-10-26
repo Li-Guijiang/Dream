@@ -2,6 +2,7 @@
 
 ### ✔️ Refactor
 
+
 - Refactored the `API` interface response format, resulting in a concise and efficient interface design.
 - Upgraded `stylelint` to `v17`.
 - Replaced the deprecated `next()` with `return` statements in `vue-router` navigation guards.
