@@ -1,5 +1,6 @@
 # 7.0.0 (2026-04-07)
 
+
 ### ✔️ Refactor
 
 - Refactored the `API` interface response format, resulting in a concise and efficient interface design.
