@@ -109,8 +109,9 @@ CREATE TABLE IF NOT EXISTS photo (
 );
 
 CREATE INDEX IF NOT EXISTS idx_photo_album ON photo(album_id);
-CREATE INDEX IF NOT EXISTS idx_chatter_comment_github_user ON chatter_comment(github_user_id);
+create index if not exists idx_photo_album ON photo(github_id_name);
 
+CREATE INDEX IF NOT EXISTS idx_chatter_comment_github_user ON chatter_comment(github_user_id);
 CREATE TABLE IF NOT EXISTS project (
     id               SERIAL PRIMARY KEY,
     name             VARCHAR(100) NOT NULL,
