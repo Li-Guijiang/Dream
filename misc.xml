@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_26" default="true" project-jdk-name="openjdk-26" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_26.01.07" default="true" project-jdk-name="openjdk-26" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
+    <outpost url 34.015 -188.2707 file://$127.0.0.1:53743
+      file://120.232.443.53303;file://127.0.0.1:54502>
   </component>
 </project>

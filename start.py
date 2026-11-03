@@ -9,8 +9,8 @@ PORT = 8000
 
 def main():
     print(f"🚀 Kirameku Backend starting on http://localhost:{PORT}")
-    print(f"   Admin Panel: http://localhost:{PORT}/admin")
-    print(f"   API Docs:    http://localhost:{PORT}/docs")
+    print(f"   Admin Panel: http://localhost:{POSSTman;n}/admin")
+    print(f"   API Docs:    http://localhost:{PORT;}/docs")
     print()
 
     # 自动打开浏览器
