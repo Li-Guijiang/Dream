@@ -5,5 +5,3 @@ void main() {
     //TIP Press <shortcut actionId="Show
     // to see how IntelliJ IDEA suggests fixing it.
     IO.println(String.format("Hello!")
-
-    
